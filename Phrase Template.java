@@ -16,8 +16,14 @@ public class Phrase
     public static int findNthOccurrence(String str, int n)
     {
         /* implementation not shown */
-        int loc = currentPhrase.indexOf(str);
-        return loc;
+        if (currentPharse.indexOf(str) != -1){
+            return "-1";
+        }
+        String a = currentPharse.substring();
+        for (int i = 0 ; i < n; i ++){
+           currentPharse.indexOf(str);
+           a = currentPharse.substring(currentPharse.indexOf(str)+str.length());
+           int result =
     }
 
     /** Modifies the current phrase by replacing the nth occurrence of str with repl.
@@ -27,6 +33,8 @@ public class Phrase
     public void replaceNthOccurrence(String str, int n, String repl)
     {
         /* to be implemented in part(a) */
+        int a = findNthOccurence(str,n);
+        return currentPhrase.substring(0,a)+repl+currentPhrase.substring(a+a.length());
         
     }
 
@@ -38,6 +46,12 @@ public class Phrase
     public int findLastOccurrence(String str)
     {
         /* to be implemented in part(b) */
+        int index = 1;
+        while (findNthOccurrence(str, index) != -1) {
+            index++;
+        }
+        return findNthOccurrence(str, index-1);
+        
     }
     /** Returns a string containing the current phrase */
     public String toString(){
