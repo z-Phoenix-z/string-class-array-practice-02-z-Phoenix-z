@@ -16,14 +16,18 @@ public class Phrase
     public static int findNthOccurrence(String str, int n)
     {
         /* implementation not shown */
-        if (currentPharse.indexOf(str) != -1){
-            return "-1";
+        int index = 0;
+        while(n != 0){
+            int i = currentPhrase.subString(index).indexOf(str);
+            if(i == -1)
+                return -1;
+            else if(n == 1)
+                index += i;
+            else
+                index += i + 1;
+            n--;
         }
-        String a = currentPharse.substring();
-        for (int i = 0 ; i < n; i ++){
-           currentPharse.indexOf(str);
-           a = currentPharse.substring(currentPharse.indexOf(str)+str.length());
-           int result =
+        return index;
     }
 
     /** Modifies the current phrase by replacing the nth occurrence of str with repl.
