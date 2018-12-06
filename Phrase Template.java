@@ -16,8 +16,7 @@ public class Phrase
     public static int findNthOccurrence(String str, int n)
     {
         /* implementation not shown */
-        int loc = currentPhrase.indexOf(str);
-        return loc;
+     
     }
 
     /** Modifies the current phrase by replacing the nth occurrence of str with repl.
@@ -27,7 +26,8 @@ public class Phrase
     public void replaceNthOccurrence(String str, int n, String repl)
     {
         /* to be implemented in part(a) */
-        
+        int a = findNthOccurence(str,n);
+        return currentPhrase.substring(0,a)+repl+currentPhrase.substring(a+a.length());
         
     }
 
