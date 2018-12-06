@@ -28,6 +28,7 @@ public class Phrase
     {
         /* to be implemented in part(a) */
         
+        
     }
 
     /** Return the index of the last occurrence of str in the current phrase;
@@ -38,6 +39,12 @@ public class Phrase
     public int findLastOccurrence(String str)
     {
         /* to be implemented in part(b) */
+        int index = 1;
+        while (findNthOccurrence(str, index) != -1) {
+            index++;
+        }
+        return findNthOccurrence(str, index-1);
+        
     }
     /** Returns a string containing the current phrase */
     public String toString(){
