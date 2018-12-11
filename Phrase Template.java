@@ -33,7 +33,7 @@ public class Phrase
         int count = 0;
         int start = 0;
         int sub = -1;
-        while (loc = currentPharse.substring(start).indexOf(str) != -1){
+        while (currentPharse.substring(start).indexOf(str) != -1){
             loc += start;
             count ++;
             if(count == n){
